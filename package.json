@@ -4,7 +4,8 @@
   "description": "react boilerplate",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "wepback -p",
   },
   "repository": {
     "type": "git",
