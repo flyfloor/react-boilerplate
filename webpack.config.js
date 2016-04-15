@@ -25,10 +25,10 @@ module.exports = {
         loaders: [
             { 
                 test: /\.less$/,
-                loader: "style!css!less" 
+                loader: "style!css!less", // ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             }, { 
                 test: /\.css$/,
-                loader: "style!css" 
+                loader: "style!css" // ExtractTextPlugin.extract("style-loader", "css-loader") 
             },  { 
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
