@@ -2,14 +2,14 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var publicPath = process.env.NODE_ENV === 'dev' ? '/dist/' : '';
 
 module.exports = {
-
-    entry: "./src/app.js",
+    entry: "./entre.js",
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'app.js',
-        publicPath: '/dist/'
+        filename: 'dot.js',
+        publicPath: publicPath
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),

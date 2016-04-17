@@ -4,8 +4,11 @@
   "description": "react boilerplate",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "wepback -p",
+    "start": "NODE_ENV=dev node server.js",
+    "dev": "NODE_ENV=dev node server.js",
+    "prod": "NODE_ENV=prod node server.js",
+    "build": "webpack -p",
+    "build-dev": "webpack"
   },
   "repository": {
     "type": "git",
