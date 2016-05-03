@@ -8,7 +8,7 @@ module.exports = {
     entry: "./entre.js",
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'dot.js',
+        filename: 'app.js',
         publicPath: publicPath
     },
     plugins: [

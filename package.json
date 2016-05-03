@@ -19,7 +19,7 @@
   ],
   "author": "jerryshew",
   "license": "MIT",
-  "homepage": "https://github.com",
+  "homepage": "https://github.com/jerryshew/react-boilerplate",
   "dependencies": {
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
