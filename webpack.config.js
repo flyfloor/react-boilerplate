@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var publicPath = process.env.NODE_ENV === 'dev' ? '/dist/' : '';
+var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
 
 module.exports = {
     entry: "./entre.js",
@@ -15,6 +16,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
+        new ForceCaseSensitivityPlugin(),
         // new ExtractTextPlugin("app.css"),
         // new webpack.optimize.UglifyJsPlugin({
         //     sourceMap: false,
