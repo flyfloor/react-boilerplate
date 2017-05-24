@@ -8,7 +8,13 @@ var app = new (express)();
 var port = process.env.PORT || (process.argv[2] || 3000);
 
 var compiler = webpack(config);
-app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+app.use(webpackDevMiddleware(compiler, { 
+    noInfo: true, 
+    publicPath: config.output.publicPath,
+    headers: {
+        "Access-Control-Allow-Origin": "*"
+    }
+}));
 app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static('dist'));
