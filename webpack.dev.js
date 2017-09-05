@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
+var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 var config = require('./webpack.base');
 
@@ -47,7 +47,7 @@ config.plugins.push(
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ForceCaseSensitivityPlugin()
+    new CaseSensitivePathsPlugin()
 );
 
 module.exports = config;
