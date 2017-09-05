@@ -6,7 +6,7 @@ var config = require('./webpack.base');
 
 config.entry = {
     app: "./src/entre.js",
-    vendors: ['react', 'react-dom', 'react-router', 'react-ui-component'],
+    vendors: ['react', 'react-dom'],
 };
 
 config.output = {
@@ -47,9 +47,7 @@ config.module.rules.unshift({
             {
                 loader: 'postcss-loader',
                 options: {
-                    plugins: loaders => [
-                        require('autoprefixer')()
-                    ]
+                    plugins: [require('autoprefixer')]
                 }
             }
         ]
@@ -70,9 +68,7 @@ config.module.rules.unshift({
             {
                 loader: 'postcss-loader',
                 options: {
-                    plugins: loaders => [
-                        require('autoprefixer')()
-                    ]
+                    plugins: [require('autoprefixer')]
                 }
             },
             'less-loader',
